@@ -1,0 +1,29 @@
+ul {
+    list-style: none;
+    display: inline;
+}
+
+.nav-item {
+    font-size: 35px;
+    margin: 10px;
+    display: inline-block !important;
+}
+
+.nav-link {
+    color: #333 !important;
+    transition: all .3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #007ee5 !important;
+}
+
+#footer p{
+    margin-top:30px;
+}
+
+.primary-text {
+    color: #007ee5;
+    font-size: 18px;
+    font-weight: 500;
+}
