@@ -19,10 +19,8 @@
   },
   "PROJECTS": {
     "AI": "AI",
-    "STEM": "STEM",
-    "ML": "ML",
+    "STEM": "STEAM",
     "AIDESC": "Welcome To Our Ai Project",
-    "STEMDESC": "Welcome To Our STEM Project",
-    "MLDESC": "Welcome To Our ML Project"
+    "STEMDESC": "Welcome To Our STEAM Project"
   }
 }
