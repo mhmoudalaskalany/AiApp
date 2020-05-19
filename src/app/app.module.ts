@@ -15,6 +15,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SliderComponent } from './components/layout/slider/slider.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -32,7 +33,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ContactComponent,
     AiComponent,
     StemComponent,
-    HomeComponent
+    HomeComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
