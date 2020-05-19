@@ -1,0 +1,28 @@
+{
+  "HOME": {
+    "HOME": "Home",
+    "PROJECT": "Projects",
+    "ABOUT": "About",
+    "CONTACT": "Contact",
+    "PROJECTS": "Our Projects",
+    "MORE": "More",
+    "ADDRESS":"Address",
+    "ADDRESSLOCATION":"123 Eldamam , KSA"
+  },
+  "SHOWCASE": {
+    "WELCOME": "Welcome To AI World"
+  },
+  "LANGUAGE": {
+    "TITLE": "Change Language",
+    "EN": "EN",
+    "AR": "AR"
+  },
+  "PROJECTS": {
+    "AI": "AI",
+    "STEM": "STEM",
+    "ML": "ML",
+    "AIDESC": "Welcome To Our Ai Project",
+    "STEMDESC": "Welcome To Our STEM Project",
+    "MLDESC": "Welcome To Our ML Project"
+  }
+}

@@ -13,6 +13,14 @@ import { AiComponent } from './components/pages/projects/ai/ai.component';
 import { MlComponent } from './components/pages/projects/ml/ml.component';
 import { StemComponent } from './components/pages/projects/stem/stem.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -30,6 +38,13 @@ import { HomeComponent } from './components/pages/home/home.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient] }
+    }),
     AppRoutingModule
   ],
   providers: [],

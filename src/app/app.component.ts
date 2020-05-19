@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Injector } from '@angular/core';
+import { Shell } from 'base/components/shell';
+import { TranslationService } from 'core/services/localization/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AiApp';
+  constructor(public inj: Injector , private translateService: TranslationService) {
+    Shell.Injector = inj;
+    this.translateService.setDefaultLanguage();
+  }
 }
