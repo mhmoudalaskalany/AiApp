@@ -8,10 +8,7 @@ import { TranslationService } from 'core/services/localization/translation.servi
 })
 export class MainComponent implements OnInit {
 
-  lang: string;
-  constructor(private translate: TranslationService) {
-    this.lang = this.translate.lang;
-    console.log(this.lang);
+  constructor() {
   }
 
   ngOnInit() {

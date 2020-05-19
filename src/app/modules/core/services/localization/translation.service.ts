@@ -11,17 +11,16 @@ import { TranslateService } from '@ngx-translate/core';
  * the main service for authentications
  */
 export class TranslationService {
-  langs = ['en', 'fr'];
+  langs = ['en', 'ar'];
   lang;
   constructor(private translate: TranslateService) {
     this.lang = localStorage.getItem('language') != null ? localStorage.getItem('language') : 'en';
   }
 
   setDefaultLanguage() {
-    this.translate.addLangs(['en', 'fr', 'ar']);
-    this.translate.setDefaultLang('en');
-    const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    this.translate.addLangs(['en', 'ar']);
+    this.translate.setDefaultLang(this.lang);
+    this.translate.use(this.lang === undefined ? 'en' : this.lang);
   }
 
   useLanguage(lang: string): void {
