@@ -10,7 +10,6 @@ import { MainComponent } from './components/layout/main/main.component';
 import { ProjectComponent } from './components/layout/project/project.component';
 import { ContactComponent } from './components/layout/contact/contact.component';
 import { AiComponent } from './components/pages/projects/ai/ai.component';
-import { MlComponent } from './components/pages/projects/ml/ml.component';
 import { StemComponent } from './components/pages/projects/stem/stem.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -32,7 +31,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ProjectComponent,
     ContactComponent,
     AiComponent,
-    MlComponent,
     StemComponent,
     HomeComponent
   ],
