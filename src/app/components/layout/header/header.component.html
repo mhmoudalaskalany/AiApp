@@ -7,7 +7,8 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ml-auto mr-5">
+      <ul class="navbar-nav mr-5" [ngClass]="{'ml-auto': translate.isEnglish(),
+    'mr-auto':!translate.isEnglish()}">
         <li class="nav-item active">
           <a [routerLink]="''" class="nav-link">{{ 'HOME.HOME' | translate }}</a>
         </li>

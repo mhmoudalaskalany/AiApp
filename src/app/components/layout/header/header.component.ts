@@ -9,7 +9,7 @@ import { StorageService } from 'core/services/storage/storage.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private translate: TranslationService, private storage: StorageService) {
+  constructor(public translate: TranslationService, private storage: StorageService) {
     console.log('language at home', this.translate.lang);
   }
 

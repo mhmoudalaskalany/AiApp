@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, RendererFactory2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 
@@ -13,7 +13,9 @@ import { TranslateService } from '@ngx-translate/core';
 export class TranslationService {
   langs = ['en', 'ar'];
   lang;
-  constructor(private translate: TranslateService) {
+  renderer;
+  constructor(private translate: TranslateService, private rendererFactory: RendererFactory2) {
+    this.renderer = rendererFactory.createRenderer(null, null);
     this.lang = localStorage.getItem('language') != null ? localStorage.getItem('language') : 'en';
   }
 
@@ -33,6 +35,20 @@ export class TranslationService {
   }
 
   setLanguage(lang: string) {
+    if (lang === 'ar') {
+      this.renderer.addClass(document.body, 'rtl');
+    } else {
+      this.renderer.removeClass(document.body, 'rtl');
+    }
     this.translate.use(lang);
+  }
+
+  isEnglish(): boolean {
+    const currentLang = this.translate.currentLang;
+    if (currentLang === 'en') {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
